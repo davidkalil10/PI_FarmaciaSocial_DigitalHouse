@@ -21,8 +21,6 @@ async function getCep(valor) {
           axiosConfig
         );
 
-        console.log(data);
-
         if (data.status !== 404 && data.status !== 500) {
           setAddressSearchValues(data);
         } else {
@@ -40,6 +38,7 @@ function setAddressSearchValues(values) {
   document.getElementById("city").value = values.city;
   document.getElementById("street").value = values.address;
   document.getElementById("neighborhood").value = values.district;
+  document.getElementById("state").value = values.state;
 }
 
 function clearForm() {
@@ -47,4 +46,5 @@ function clearForm() {
   document.getElementById("city").value = "";
   document.getElementById("street").value = "";
   document.getElementById("neighborhood").value = "";
+  document.getElementById("state").value = "";
 }
