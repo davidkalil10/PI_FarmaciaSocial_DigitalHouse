@@ -1,3 +1,23 @@
+var showPassword = false;
+
+function handlePasswordInput() {
+  console.log("Pass");
+  let input = document.querySelector("#password");
+  let icon = document.querySelector(showPassword ? ".fa-eye" : ".fa-eye-slash");
+
+  showPassword = !showPassword;
+
+  if (showPassword) {
+    icon.classList.remove("fa-eye-slash");
+    input.setAttribute("type", "text");
+    icon.classList.add("fa-eye");
+  } else {
+    icon.classList.remove("fa-eye");
+    input.setAttribute("type", "password");
+    icon.classList.add("fa-eye-slash");
+  }
+}
+
 /**
  * Inputs masks
  */
