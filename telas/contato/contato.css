@@ -1,0 +1,17 @@
+body {
+    background-image: url(image/bgcontato.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h2{
+    padding-top: 70px;
+}
+
+.send-btn{
+    padding-bottom: 20px;
+}
+
+
