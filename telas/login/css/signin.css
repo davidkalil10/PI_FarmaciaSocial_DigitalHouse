@@ -48,3 +48,30 @@ body {
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
+
+.text-logo {
+  min-height: 10em;
+  font-size: 20px;
+  vertical-align: middle;
+  font-weight: bold;
+ }
+
+ .form-wrapper > span {
+  color: #2a9d8f;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h1 {
+  color: #2a9d8f;
+  margin: 0 auto;
+  font-weight: 600;
+  font-weight: bold;
+}
+
+.disclaimer {
+  margin: 0 auto;
+  font-size: 0.9em;
+  font-weight: 600;
+}
