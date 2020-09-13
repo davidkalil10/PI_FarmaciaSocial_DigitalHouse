@@ -19,13 +19,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      media="screen"
-      href="../../main.css"
+      href="./telas/cadastro-usuario/cadastro-usuario.css"
     />
-    <link rel="stylesheet" type="text/css" href="cadastro-usuario.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -126,6 +125,7 @@
               type="text"
               id="cep"
               name="cep"
+              maxlength="9"
             />
           </div>
           <div>
@@ -204,8 +204,9 @@
       src="https://kit.fontawesome.com/37a6fc82c8.js"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
-    <script src="cadastro-usuario.js"></script>
+    <script src="./telas/cadastro-usuario/cadastro-usuario.js"></script>
+    <script src="./telas/cadastro-usuario/masks.js"></script>
+    <script src="./telas/cadastro-usuario/validations.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
