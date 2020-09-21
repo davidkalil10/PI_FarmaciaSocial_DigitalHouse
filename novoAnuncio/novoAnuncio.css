@@ -1,0 +1,53 @@
+main {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+main>h1 {
+    font-size: x-large;
+    text-align: center;
+}
+
+.form-group>label,
+.text-bold {
+    font-weight: bold;
+}
+
+.formatForm {
+    padding: 1rem;
+    border: solid 1px #2a9d8f;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff!important;
+    border-color: #f4a261 !important;
+    background-color: #f4a261!important;
+}
+
+.termosUso {
+    font-size: 14px;
+    margin: 0 !important;
+}
+
+
+/*COLAR FOOTER NO BURACO DO FOOTER*/
+
+@media only screen and (min-width: 480px) {
+    html {
+        height: 100%;
+    }
+    body {
+        min-height: 100%;
+        position: relative;
+        padding-bottom: 80px;
+    }
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 80px;
+    }
+}
