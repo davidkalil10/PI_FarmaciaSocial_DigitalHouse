@@ -190,15 +190,24 @@
 
 // });
 
+const novaDoacao = document.getElementById("novaDoacao");
+
+novaDoacao.addEventListener("click", function() {
+    console.log("passei por aqui")
+    window.location.href = "/novoAnuncio.html";
+
+})
+
+
 /**
  * Metadatas functions
  */
 function getShareButtons() {
-  let shareButtonsArray = document.getElementsByClassName('share-button');
-  
-  Array.from(shareButtonsArray).forEach(button => {
-    button.setAttribute('data-url', window.location.href);
-  });
+    let shareButtonsArray = document.getElementsByClassName('share-button');
+
+    Array.from(shareButtonsArray).forEach(button => {
+        button.setAttribute('data-url', window.location.href);
+    });
 
 }
 getShareButtons();
