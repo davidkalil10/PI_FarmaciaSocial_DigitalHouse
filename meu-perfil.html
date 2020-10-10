@@ -73,33 +73,73 @@
       </div>
     </nav>
   </header>
-
   <div class="relative above-header container">
     <div class="row">
-      <div class="col col-5"></div>
-      <div class="card col">
+      <div class="col"></div>
+      <div class="col col-5">
+        <h2>Meu cadastro
+          <br>
+        <p class="font-size-15 font-weight-normal">Configure seu cadastro</p>
+        </h2>
+      </div>
+      <div class="col"></div>
+      
+      
+    </div>
+  </div>
+  <div class="relative above-header container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="card col col-5">
         <form class="card-body" id="cadastro-perfil">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label class="font-weight-bold">Dados da conta</label>
+            <br>        
+            <label for="exampleInputName">Nome</label>
+            <input type="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+              placeholder="Nome completo">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="exampleInputEmail">E-mail</label>
+            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
+              placeholder="E-mail">
+            <small id="emailHelp" class="form-text text-muted">Não compartilharemos seu e-mail com ninguém.</small>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="exampleInputPassword1">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********">
           </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">CPF</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="CPF">
+          </div>
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-3 pt-0">Gênero</legend>
+              <div class="col-sm-9">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    Masculino
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2">
+                    Feminino
+                  </label>
+                </div>
+                
+              </div>
+            </div>
+          </fieldset>
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-      <div class="col col-1"></div>
+      <div class="col"></div>
     </div>
 
   </div>
