@@ -208,3 +208,19 @@ footer {
     width: 25vw;
   }
 }
+
+.relative{
+  position: relative;
+}
+
+.above-header{
+  top: 80px;
+}
+
+.flex{
+  display: flex;
+}
+
+#cadastro-perfil{
+  
+}
