@@ -194,7 +194,7 @@ const novaDoacao = document.getElementById("novaDoacao");
 
 novaDoacao.addEventListener("click", function() {
     console.log("passei por aqui")
-    window.location.href = "/novoAnuncio.html";
+    window.location.href = "novoAnuncio.html";
 
 })
 
