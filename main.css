@@ -105,6 +105,23 @@ footer {
   }
 }
 
+.showcase1 {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-self: center;
+  min-height: 100%;
+  margin: 8% auto 6% auto;
+}
+
+@media (min-width: 1498px) {
+  .showcase {
+    width: 60vw;
+  }
+}
+
 /*Novos estilos carousel*/
 
 /* GLOBAL STYLES CAROUSEL
@@ -235,4 +252,12 @@ footer {
 
 .font-weight-strong{
   font-weight: bold;
+}
+
+.fa {
+	color: black;
+}
+
+#avatar{
+  margin-right: 7px;
 }
