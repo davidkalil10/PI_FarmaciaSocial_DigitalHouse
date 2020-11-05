@@ -190,7 +190,7 @@
 
     <script type="text/javascript">
       window.onload = function() {
-        const key = 'ym51GArNIA9JWACyuiQ5yD83opLDQIbv';
+        const key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
         var lat = '';
         var long = '';
         L.mapquest.key = key;
@@ -214,6 +214,7 @@
         });
 
         map.on('click',  async function(e){
+          const cepInput = document.querySelector('#cep');
           var url = `https://www.mapquestapi.com/geocoding/v1/reverse?key=${key}&location=${e.latlng.lat},${e.latlng.lng}&outFormat=json&thumbMaps=false`
 
           for(var i = 0; i < markers.length; i++){
@@ -225,15 +226,30 @@
             draggable: true
           }).addTo(map);
 
+          console.log(e.latlng.lat, e.latlng.lng)
+
           // Reverse geocoding
           const { data } = await axios.get(url,
             null,
             axiosConfig
           );
 
+          const addressInfo = data.results[0].locations[0];
+
+          var formattedCep = '';
+
+          Array.from(addressInfo.postalCode).map((letter, index) => {
+            if(index === 5){
+              formattedCep = formattedCep += "-"
+            }
+            console.log(letter)
+            formattedCep = formattedCep += letter;
+          });
+          
+          cepInput.value = formattedCep;
+
           console.log(data.results[0].locations[0]);
           markers.push(marker);
-
         });
 
         
