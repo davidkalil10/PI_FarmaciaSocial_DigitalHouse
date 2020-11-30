@@ -103,6 +103,7 @@ footer {
   .showcase {
     width: 60vw;
   }
+<<<<<<< HEAD
 }
 
 .showcase1 {
@@ -122,6 +123,10 @@ footer {
   }
 }
 
+=======
+}
+
+>>>>>>> b063f05723285c3026b02b92708aa80c73d26f51
 /*Novos estilos carousel*/
 
 /* GLOBAL STYLES CAROUSEL
@@ -225,6 +230,7 @@ footer {
     width: 25vw;
   }
 }
+<<<<<<< HEAD
 
 .relative{
   position: relative;
@@ -257,3 +263,5 @@ footer {
 #avatar{
   margin-right: 7px;
 }
+=======
+>>>>>>> b063f05723285c3026b02b92708aa80c73d26f51

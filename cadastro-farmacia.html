@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"
+      integrity="sha512-nqIFZC8560+CqHgXKez61MI0f9XSTKLkm0zFVm/99Wt0jSTZ7yeeYwbzyl0SGn/s8Mulbdw+ScCG41hmO2+FKw=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="../../assets/logo.png"
+      type="image/x-icon"
+    />
+    <title>Cadastrar Farmácia</title>
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./telas/cadastro-farmacia/cadastro-farmacia.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/da77f520d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer/dist/bouncer.polyfills.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />   
+
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <div
+        class="logo"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <a
+          class="farmaciaSocial"
+          href="/"
+          style="text-decoration: none; padding: 0px"
+        >
+          <img
+            src="../../assets/logo.png"
+            height="50px"
+            class="d-inline-block align-top"
+          />
+          <span style="color: #f4a261">Farmácia</span>
+          <span style="color: #2a9d8f">Social</span>
+        </a>
+      </div>
+
+      <span>Crie a sua conta. É gratis!</span>
+      <form class="form-cadastro-farmacia" action="#" method="POST">
+        <label>Nome Fantasia</label>
+        <input
+          class="form-control form-control-sm"
+          type="text"
+          id="fantasyName"
+          name="fantasyName"
+        />
+
+        <label>CNPJ</label>
+        <input
+          class="form-control form-control-sm"
+          type="text"
+          id="cnpj"
+          name="cnpj"
+        />
+
+        <label>Nome do Farmacêutico</label>
+        <input
+          class="form-control form-control-sm"
+          maxlength="15"
+          type="text"
+          id="pharmaceutical"
+          name="pharmaceutical"
+        />
+
+        <label>Senha</label>
+        <div class="input-group flex-row">
+          <input
+            class="form-control form-control-sm"
+            type="password"
+            id="password"
+            name="password"
+          />
+          <div
+            class="input-group-append sm btn-eye"
+            onclick="handlePasswordInput()"
+          >
+            <i class="input-group-text fas fa-eye-slash" id="basic-addon2"></i>
+          </div>
+        </div>
+        <div id="bouncer-error_password"></div>
+        
+        <div class="input-wrapper">
+          <div>
+            <label>CEP</label>
+            <input
+              class="form-control form-control-sm"
+              onblur="getCep(this.value);"
+              type="text"
+              id="cep"
+              name="cep"
+              maxlength="9"
+            />
+          </div>
+          <div>
+            <label>Rua</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              id="street"
+              name="street"
+            />
+          </div>
+          <!-- </div> -->
+
+          <!-- <div class="input-wrapper"> -->
+          <div>
+            <label>Bairro</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              id="neighborhood"
+              name="neighborhood"
+            />
+          </div>
+          <div>
+            <label>Número</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              id="number"
+              name="number"
+            />
+          </div>
+
+          <div>
+            <label>Cidade</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              id="city"
+              name="city"
+            />
+          </div>
+
+          <div>
+            <label>Estado</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              id="state"
+              name="state"
+            />
+          </div>
+        </div>
+        <label>Selecione no mapa a localização da farmácia</label>
+        <div style="width: 542px; height: 300px; display: flex; margin: 4vh auto" id="map" ></div>
+        <button style="display: flex; margin: 0 auto" class="btn btn-orange">Registrar</button>
+      </form>
+
+      <p>
+        Ao se registrar, você concorda com os
+        <strong><a href="#1">Termos de Uso</a></strong> e com a
+        <strong> <a href="#2">Política de Privacidade</a> </strong>, do site
+        Farmácia Social
+      </p>
+    </div>
+
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        const key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+        var lat = '';
+        var long = '';
+        L.mapquest.key = key;
+        var markers = [];        
+
+        const axiosConfig = {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          responseType: "json",
+          crossDomain: true,
+        };
+       
+
+        var map = L.mapquest.map('map', {
+          center: [-22.563655367387675, -44.97229278087617],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 15
+        });
+
+        map.on('click',  async function(e){
+          const cepInput = document.querySelector('#cep');
+          var url = `https://www.mapquestapi.com/geocoding/v1/reverse?key=${key}&location=${e.latlng.lat},${e.latlng.lng}&outFormat=json&thumbMaps=false`
+
+          for(var i = 0; i < markers.length; i++){
+              map.removeLayer(markers[i]);
+          }
+
+          var marker = L.marker([e.latlng.lat, e.latlng.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: true
+          }).addTo(map);
+
+          console.log(e.latlng.lat, e.latlng.lng)
+
+          // Reverse geocoding
+          const { data } = await axios.get(url,
+            null,
+            axiosConfig
+          );
+
+          const addressInfo = data.results[0].locations[0];
+
+          var formattedCep = '';
+
+          Array.from(addressInfo.postalCode).map((letter, index) => {
+            if(index === 5){
+              formattedCep = formattedCep += "-"
+            }
+            console.log(letter)
+            formattedCep = formattedCep += letter;
+          });
+          
+          cepInput.value = formattedCep;
+
+          console.log(data.results[0].locations[0]);
+          markers.push(marker);
+        });
+
+        
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/37a6fc82c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./telas/cadastro-farmacia/cadastro-farmacia.js"></script>
+    <script src="./telas/cadastro-farmacia/masks.js"></script>
+    <script src="./telas/cadastro-farmacia/validations.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0"
+      nonce="fqVmqaXn"
+    ></script>
+  </body>
+</html>

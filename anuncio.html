@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <title>Farmácia Social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="telas/anuncio/anuncio.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/da77f520d1.js" crossorigin="anonymous"></script>
+   
+</head>
+
+<body class=" bg-light">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd">
+            <div class="logo" style="display: flex; justify-content: center; align-items: center">
+                <a class="farmaciaSocial" href="index.html" style="text-decoration: none; padding: 0px">
+                    <img src="assets/logo.png" height="50px" class="d-inline-block align-top" />
+                    <span style="color: #f4a261">Farmácia</span>
+                    <span style="color: #2a9d8f">Social</span>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">
+                            <i class="fas fa-info-circle"></i> Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="duvidas.html">
+                            <i class="fas fa-question"></i> Duvidas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">
+                            <i class="fas fa-headset"></i> Contato
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-user-circle"></i> Meu Perfil</a>
+                    </li>
+                </ul>
+                <button class="logo btn btn-orange my-2 my-sm-0" type="submit">
+        DOAR
+      </button>
+                <!-- <form class="form-inline mt-2 mt-md-0">
+              <input required class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="container">
+        <div class="row">
+            <section class="imagem col-sm-12 col-md-6">
+                <img src="telas/anuncio/assets/remedio.jpg" class="imagem img-fluid">
+            </section>
+
+            <section class="conteudo col-sm-12 col-md-6 d-flex-column">
+                <h2 class="text-weight-bold text-center">Amoxicilina</h2>
+
+                <h3>Descrição</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde autem voluptatibus voluptatum, debitis qui corporis sit quam esse laborum culpa aliquam. Porro consequuntur delectus molestias nesciunt nulla deserunt nostrum velit.</p>
+                <button class="btn btn-orange logo">Eu quero!</button>
+
+                <h3 class="my-2">Detalhes</h3>
+                <div class="row justify-content-between">
+                    <table class="table table-hover col-sm-12 col-md-6 m-0">
+                        <tbody>
+                            <tr class="justify-content-between ">
+                                <td><strong> Tarja: </strong></td>
+                                <td>
+                                    <span class="badge badge-danger" style="width: 30px; height: 18px">&nbsp;</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Embalagem: </strong></td>
+                                <td>Caixa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Quantidade: </strong></td>
+                                <td>5 un</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dosagem: </strong></td>
+                                <td>500 mg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-hover col-sm-12 col-md-6 m-0">
+
+                        <tbody>
+                            <tr>
+                                <td><strong>Data Fabricação: </strong></td>
+                                <td>23/01/2018</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data Validade: </strong></td>
+                                <td>23/01/2021</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Número Lote: </strong></td>
+                                <td>5048000354</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Distancia: </strong></td>
+                                <td>~ 15 Km</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+          </section>
+        </div>
+    </main>
+
+    <div style="display: flex; margin: 4vh auto; width: 900px; height: 400px;" id="map"></div>
+
+    <footer class="dark-footer">
+        <div class="footer-component">
+            <div class="left-content">Nossa equipe</div>
+
+            <div class="center-content">Nossos parceiros</div>
+
+            <div class="right-content">
+                <!-- Twitter -->
+                <button class="share-button" data-sharer="twitter" data-title="Confira medicamentos que estão em doação ou ajude alguém doando." data-hashtags="farmacia-social, medicamento-gratuito">
+            <img class="share-icon" src="assets/share-icons/twitter.svg" />
+          </button>
+
+                <!-- Facebook  -->
+                <button class="share-button" data-sharer="facebook" data-title="Confira medicamentos que estão em doação ou ajude alguém doando." data-hashtags="farmacia-social, medicamento-gratuito">
+            <img class="share-icon" src="assets/share-icons/facebook.svg" />
+          </button>
+
+                <!-- Instagram -->
+                <button class="share-button" data-sharer="email" data-title="Confira medicamentos que estão em doação ou ajude alguém doando." data-hashtags="farmacia-social, medicamento-gratuito">
+            <img class="share-icon" src="assets/share-icons/email.svg" />
+          </button>
+
+                <!-- LinkedIn -->
+                <button class="share-button" data-sharer="linkedin" data-title="Confira medicamentos que estão em doação ou ajude alguém doando." data-hashtags="farmacia-social, medicamento-gratuito" data-url="https://ellisonleao.github.io/.js/">
+            <img class="share-icon" src="assets/share-icons/linkedin.svg" />
+          </button>
+
+                <!-- WhatsApp  -->
+                <button class="share-button" data-sharer="whatsapp" data-title="Confira medicamentos que estão em doação ou ajude alguém doando." data-hashtags="farmacia-social, medicamento-gratuito" data-web="true">
+            <img class="share-icon" src="assets/share-icons/whatsapp.svg" />
+          </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/37a6fc82c8.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+</body>
+
+</html>
